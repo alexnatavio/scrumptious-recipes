@@ -1,0 +1,33 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+    Scrumptious Recipes
+{% endblock title %}
+</head>
+
+{% block content %}
+    <header>
+        <nav>
+            <a href="{% url 'recipe_list' %}">Main Page</a>
+            <a href="{% url 'create_recipe' %}">Create a Recipe</a>
+        </nav>
+    </header>
+    <main>
+        <h1 class="centertext">Scrumptious Recipes</h1>
+        <h2 class="centertext">All the food that's fit to eat</h2>
+            <div class="grid-mainpage">
+                {% for recipe in recipe_list %}
+                <div>
+                <h3>
+                    <a class="colored-anchor" href="{% url 'show_recipe' recipe.id %}">{{ recipe.title }}</a></h3>
+                    <p>{{ recipe.created_on|date:"F  j, Y" }}</p>
+                <img src=" {{recipe.picture }}">
+                <div>4.3 stars</div>
+                </div>
+                {% empty %}
+                <p> There are no recipes.</p>
+                {% endfor%}
+            </div>
+        </main>
+{% endblock content %}

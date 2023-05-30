@@ -1,0 +1,81 @@
+
+
+@font-face {
+    font-family: 'ActionMan';
+    src: url('./fonts/Action_Man.ttf') format('truetype');
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}
+
+/* required: remove underline on anchors */
+a {
+    text-decoration: none;
+  }
+/* required: change the `a` "vegetarian taco" to a dif color */
+.colored-anchor {
+  color:#D40919
+}
+/* required: change h1 to the same color as above */
+h1 {
+  color:#D40919
+}
+
+/* required: add color and padding to nav */
+nav {
+  background-color:#F17927;
+  border: 4px solid black;
+  padding: 14px;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* required: add color and padding to footer */
+
+footer {
+  bottom: 0;
+  background-color:#BDC027;
+  border: 4px solid black;
+  padding: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* required: use grid template column to create 2 rows by 4 columns */
+.grid-mainpage {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.grid-mainpage div {
+  display: grid;
+}
+
+/* required: every even row to be grey */
+tr:nth-child(even){
+  background-color: grey;
+}
+
+
+/* get footer closer to bottom, some space on left for visual improvement */
+main {
+  padding-bottom: 10vh;
+  padding-left: 2vw;
+}
+
+/* got a custom font for fun (and practice) and changed background color to theme */
+body {
+  display:grid;
+  min-height: 100%;
+  font-family: 'ActionMan', Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  background-color: #F3E38C;
+}
+
+/* I personally like when text is centered so I made an extra class */
+/* to slap onto any other text I felt should be centered for visual */
+.centertext{
+  text-align: center;
+}

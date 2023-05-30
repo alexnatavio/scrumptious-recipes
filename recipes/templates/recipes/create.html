@@ -1,0 +1,24 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+Create a Recipe - Scrumptious recipes
+{% endblock title %}
+
+{% block content %}
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'recipe_list' %}">Main Page</a>
+        </nav>
+    </header>
+
+    <main>
+        <form method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button>Create</button>
+        </form>
+    </main>
+</body>
+{% endblock content %}
