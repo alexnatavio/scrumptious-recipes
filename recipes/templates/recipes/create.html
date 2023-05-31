@@ -14,11 +14,14 @@ Create a Recipe - Scrumptious recipes
     </header>
 
     <main>
+    <div class="form-container">
+        <h1>Create a Recipe!</h1>
         <form method="post">
             {% csrf_token %}
             {{form.as_p}}
             <button>Create</button>
         </form>
+        </div>
     </main>
 </body>
 {% endblock content %}

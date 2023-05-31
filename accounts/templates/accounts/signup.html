@@ -14,10 +14,12 @@ Sign Up! - Scrumptious Recipes
 </header>
 <main>
     <h1> Sign up!</h1>
+    <div class="form-container">
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button> Sign Up</button>
+        <button> Sign Up </button>
     </form>
+</div>
 </main>
 {% endblock content %}

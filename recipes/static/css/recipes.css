@@ -27,11 +27,15 @@ h1 {
 nav {
   background-color:#F17927;
   border: 4px solid black;
-  padding: 14px;
+  padding: 18px;
   font-size: 24px;
   text-align: center;
 }
 
+nav a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
 /* required: add color and padding to footer */
 
 footer {
@@ -77,5 +81,10 @@ body {
 /* I personally like when text is centered so I made an extra class */
 /* to slap onto any other text I felt should be centered for visual */
 .centertext{
+  text-align: center;
+}
+
+
+.form-container {
   text-align: center;
 }

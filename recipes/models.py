@@ -8,9 +8,14 @@ class Recipe(models.Model):
     description = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
 
+    author = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        related_name="recipes",
+        on_delete=models.CASCADE,
+        null=True,)
+
     def __str__(self):
         return self.title
-
 
 
 class RecipeStep(models.Model):

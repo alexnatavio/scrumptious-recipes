@@ -13,11 +13,13 @@ Login! - Scrumptious Recipes
     </nav>
 </header>
 <main>
-    <h1>Login!</h1>
-    <form method="post">
+    <div class="form-container">
+    <h1> Login! </h1>
+       <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button> Submit </button>
     </form>
+</div>
 </main>
 {% endblock content %}
